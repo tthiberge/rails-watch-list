@@ -18,7 +18,7 @@
   <div class="cards-display">
     <% @lists.each do |list| %>
       <%= link_to list_path(list), class: "text-decoration-none" do %>
-        <div class="card-category" style="background-image:  url(https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80)">
+        <div class="card-category" style="background-image:  url('https://source.unsplash.com/random?<%= list.name %>')">
           <p><%= list.name %></p>
         </div>
       <% end %>
@@ -30,3 +30,10 @@
     </div>
   </div>
 </div>
+
+
+<!--
+PRATIQUE POUR AVOIR UNE IMAGE ALEATOIRE BASEE SUR LE MOT CLE:
+style="background-image:  url('https://source.unsplash.com/random?<%= list.name %>')"
+-->
+<!---->
