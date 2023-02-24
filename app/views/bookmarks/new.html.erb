@@ -1,0 +1,7 @@
+<div class="container">
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment, label: "Comment for this bookmark"  %>
+    <%= f.association :movie, label: "For which movie?" %>
+    <%= f.submit "Add this specific bookmark!", class: "btn btn-success"%>
+  <% end %>
+</div>

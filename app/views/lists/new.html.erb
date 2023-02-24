@@ -1,0 +1,13 @@
+<div class="container">
+
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name, label: "Name of the list" %>
+    <%= f.submit "Add this awesome new list!", class: "btn btn-success" %>
+  <% end %>
+
+    <div class="back-plus-new">
+    <%= link_to lists_path do %>
+            <button class="btn btn-warning my-3">Back to lists !</button>
+    <% end %>
+  </div>
+</div>
