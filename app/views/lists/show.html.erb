@@ -1,9 +1,8 @@
 <div class="container">
 
-  <div class="card-list-header">
+  <div class="card-list-header" style="background-image: url('<%= @list.photo.attached? ? (cl_image_path @list.photo.key, height: 300, width: 500, crop: :fill) : ('https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80') %>');">
     <h4><%= @list.name %></h4>
   </div>
-
 
   <div class="card-list">
     <%# <img src="https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
@@ -42,4 +41,6 @@
               <button class="btn btn-success" style="margin: 45px;">Add a bookmark !</button>
       <% end %>
   </div>
+
+  <%= cl_image_tag ("snulil74xstwxnekpi7b") %>
 </div>

@@ -23,16 +23,27 @@ movies_results.each do |movie|
     rating: movie['vote_average'])
 end
 
-# List.create(name: "Romance")
-# List.create(name: "Action")
-List.create(name: "Adventure")
-List.create(name: "Anticipation")
-List.create(name: "European")
-List.create(name: "Asian")
-# List.create(name: "Marvel")
-# List.create(name: "Starwars")
-# List.create(name: "Anime")
-# List.create(name: "French movies")
+
+file_Adventure = URI.open("https://images.unsplash.com/photo-1655514514831-5bfefa52f500?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=902&q=80")
+list_Adventure = List.new(name: "Adventure")
+list_Adventure.photo.attach(io: file_Adventure, filename: "Adventure.png", content_type: "image/png")
+list_Adventure.save
+
+file_Anticipation = URI.open("https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")
+list_Anticipation = List.new(name: "Anticipation")
+list_Anticipation.photo.attach(io: file_Anticipation, filename: "Anticipation.png", content_type: "image/png")
+list_Anticipation.save
+
+file_European = URI.open("https://images.unsplash.com/photo-1608817576152-26bbdb00afb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=921&q=80")
+list_European = List.new(name: "European")
+list_European.photo.attach(io: file_European, filename: "European.png", content_type: "image/png")
+list_European.save
+
+file_Asian = URI.open("https://plus.unsplash.com/premium_photo-1661882377491-c5685537447f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")
+list_Asian = List.new(name: "Asian")
+list_Asian.photo.attach(io: file_Asian, filename: "Asian.png", content_type: "image/png")
+list_Asian.save
+
 
 puts "seeded"
 

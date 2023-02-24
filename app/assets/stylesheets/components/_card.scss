@@ -18,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+  // background-image: url('https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 15px;
   color: white;
@@ -72,11 +72,12 @@
   align-items: flex-end;
   position: relative;
 }
-// .back-plus-new{
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
+
+.back-plus-new{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
