@@ -28,11 +28,13 @@ class ListsController < ApplicationController
     if @list.photo.attached?
       @list.photo.purge # UTILE
     end
-    if @list.destroy
-      redirect_to lists_path
-    else
-      render :new, status: :unprocessable_entity
-    end
+    @list.destroy
+    redirect_to lists_path
+    # if @list.destroy
+    #   redirect_to lists_path
+    # else
+    #   render :new, status: :unprocessable_entity
+    # end
   end
 
   private

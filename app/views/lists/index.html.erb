@@ -8,14 +8,18 @@
 
 <div class="container">
   <div class="cards-display">
-    <% @lists.each do |list| %>
-      <%= link_to list_path(list), class: "text-decoration-none" do %>
-        <div class="card-category" style="background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.attached? ? (cl_image_path list.photo.key, height: 300, width: 500, crop: :fill) : ('https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80') %>');">
-          <p><%= list.name %></p>
+      <% @lists.each do |list| %>
+        <div class="relative">
+            <i class="fa-solid fa-circle-xmark remove"></i>
+
+            <%= link_to list_path(list), class: "text-decoration-none" do %>
+              <div class="card-category relative " style="background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.attached? ? (cl_image_path list.photo.key, height: 300, width: 500, crop: :fill) : ('https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80') %>');">
+                <p><%= list.name %></p>
+              </div>
+                <%# <p><%= link_to "Delete", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            <% end %>
         </div>
-          <%# <p><%= link_to "Delete", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
       <% end %>
-    <% end %>
     <div class="button-new d-flex justify-content-center align-items-center">
       <%= link_to new_list_path do %>
         <button class="btn btn-success">Create a new list !</button>
@@ -23,7 +27,6 @@
     </div>
   </div>
 </div>
-
 
 
 <%# PRATIQUE POUR AVOIR UNE IMAGE ALEATOIRE BASEE SUR LE MOT CLE:
