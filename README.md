@@ -1,24 +1,7 @@
-# README
+# Watch List
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+As part of my Web Development, we coded this app to rehearse our understanding of N:N database relationships and the practical implementation in Rails.
 
-Things you may want to cover:
+The front is here to support the back.
+The app uses images hosted on Cloudinary, and has been deployed on Heroku
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
